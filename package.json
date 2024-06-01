@@ -1,12 +1,26 @@
 {
   "name": "signbe",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -x babel-node ./src/app.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@babel/cli": "^7.24.6",
+    "@babel/core": "^7.24.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.2"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.24.6",
+    "@babel/plugin-transform-runtime": "^7.24.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/runtime": "^7.24.6"
+  }
 }
