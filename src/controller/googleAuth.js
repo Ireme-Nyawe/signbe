@@ -7,7 +7,7 @@ const googleAuth = async (req, res) => {
     });
     if (logingUser) {
       return res.redirect(
-        `${process.env.FRONTEND_URL}/login?token=${generateToken(
+        `${process.env.FRONTEND_URL}/?token=${generateToken(
           logingUser._id
         )}`
       );
@@ -17,7 +17,7 @@ const googleAuth = async (req, res) => {
         password: "11111",
       });
       return res.redirect(
-        `${process.env.FRONTEND_URL}/login?token=${generateToken(user._id)}`
+        `${process.env.FRONTEND_URL}/?token=${generateToken(user._id)}`
       );
     }
   } catch (error) {
