@@ -7,8 +7,8 @@ googleRoute.get('/google',passport.authenticate('google', { scope: ['email', 'pr
 googleRoute.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/google/protected",
-    failureRedirect: "/google/failure",
+    successRedirect: "/auth/google/protected",
+    failureRedirect: "/auth/google/failure",
   })
 );
 googleRoute.get("/google/protected",googleAuth);
