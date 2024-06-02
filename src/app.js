@@ -22,8 +22,8 @@ app.use(
   app.use(passport.session());
 app.use(express.json());
 
-app.use("/users", routeUser);
-app.use("/auth",googleRoute);
+app.use("/", routeUser);
+app.use("/",googleRoute);
 
 app.get("/", (req, res) => {
   res.send("Welcome on Home end Point, Let's Go!");
