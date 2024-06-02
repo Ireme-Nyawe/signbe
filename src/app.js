@@ -5,6 +5,7 @@ import session from "express-session";
 import passport from "passport";
 import googleRoute from "./routes/googleAuth.js";
 import cors from "cors";
+import router from "./routes/index.js";
 
 
 const app = express();
@@ -22,8 +23,7 @@ app.use(
   app.use(passport.session());
 app.use(express.json());
 
-app.use("/", routeUser);
-app.use("/",googleRoute);
+app.use("/", router);
 
 app.get("/", (req, res) => {
   res.send("Welcome on Home end Point, Let's Go!");
