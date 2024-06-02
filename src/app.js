@@ -4,10 +4,12 @@ import routeUser from "./routes/user.js";
 import session from "express-session";
 import passport from "passport";
 import googleRoute from "./routes/googleAuth.js";
+import cors from "cors";
 
 
 const app = express();
 dotenv.config();
+app.use(cors());
 app.use(
     session({
       secret: "keyboard cat",

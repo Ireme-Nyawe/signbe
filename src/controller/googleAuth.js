@@ -7,7 +7,7 @@ const googleAuth = async (req, res) => {
     });
     if (logingUser) {
       return res.redirect(
-        `${process.env.FRONTEND_URL}/?token=${generateToken(
+        `${process.env.FRONTEND_URL}/login?token=${generateToken(
           logingUser._id
         )}`
       );
@@ -24,6 +24,7 @@ const googleAuth = async (req, res) => {
     console.log(error);
   }
 };
+
 
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });

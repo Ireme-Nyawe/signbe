@@ -29,7 +29,7 @@ export const signIn = async (req, res) => {
       });
       return res.status(200).json({
         success: true,
-        user: login,
+        data: login,
         token: token,
       });
     } else {
