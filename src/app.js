@@ -23,7 +23,7 @@ app.use(
   app.use(passport.session());
 app.use(express.json());
 
-app.use("/", router);
+app.use(router);
 
 app.get("/", (req, res) => {
   res.send("Welcome on Home end Point, Let's Go!");
